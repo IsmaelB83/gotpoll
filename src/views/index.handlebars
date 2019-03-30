@@ -2,23 +2,23 @@
 <form class="form-inline" method="POST" action="/poll/">
   
     <div class="form-row align-items-center w-100">
-        <div class="col-auto">
+        <div class="col-xs-12 col-sm-3">
             <label class="sr-only" for="name">Name</label>
             <input type="text" class="form-control form-control-lg mb-2" id="name" name="name" placeholder="Tu nombre caminante!!">
         </div>
-        <div class="col-auto">
+        <div class="col-xs-12 col-sm-5">
             <label class="sr-only" for="email">Email</label>
             <input type="email" class="form-control form-control-lg mb-2" id="email" name="email" placeholder="Tu email">
         </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary btn-lg mb-2">Enviar encuesta</button>
+        <div class="col-xs-12 col-sm-4">
+            <button type="submit" class="btn btn-primary btn-lg btn-block mb-2">Enviar encuesta</button>
         </div>
     </div>
     <div class="poll-line">
         <div class="gap" style="grid-column: span 3"></div>
-        <h4>Vive</h4>
-        <h4>White Walker</h4>
-        <h4>Muere</h4>
+        <h3>Vive</h3>
+        <h3>Caminante</h3>
+        <h3>Muere</h3>
     </div>
     {{#each results }}
     <div class="poll-line">

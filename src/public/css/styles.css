@@ -12,7 +12,8 @@ body {
     background-color: var(--back-dark-color);
     background-image: url("../img/banner.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center center;
     color: var(--color-white);
     padding-top: var(--height-nav);
     font-size: var(--font-size);
@@ -57,9 +58,11 @@ body {
 
 @media (max-width: 480px) {
     .title-poll {
-        font-size: 2em;
+        font-size: 1.25em;
         font-weight: 700;
         line-height: 1.2em;
+        margin-top: 0;
+        text-align: center;
     }
     .title-poll-body {
         color:var(--color-white);
@@ -80,7 +83,7 @@ body {
     width: 100%;
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 100px auto 1fr 100px 100px 100px;
+    grid-template-columns: minmax(50px, 100px) minmax(45px, 100px) 1fr minmax(25px, 100px) minmax(25px, 100px) minmax(25px, 100px);
     grid-gap: 10px;
     justify-items: center;
     align-items: center;
@@ -128,7 +131,7 @@ body {
     line-height: 1.60em;
 }
 
- .poll-line-figure:hover .overlay-img {
+.poll-line-figure:hover .overlay-img {
     opacity: 1;
 }
 
@@ -147,6 +150,19 @@ body {
     border-bottom: 3px dotted white;
     padding-top: 10px;
     overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .poll-line-figure {
+        height: 60px;
+        width: 60px;
+    }
+    .poll-line h3 {
+        font-size: 1em;
+    }
+    .poll-dotted {
+        width: 0px;
+    }
 }
 
 /* HTML5 Boilerplate radio-one hidden styles */
@@ -176,7 +192,6 @@ label {
     border-radius: 1em;           /*hard border*/
     border: 0.125em solid #fff;
     box-shadow: 0 0 0 0.1em #000;   /*light shadow*/
-    margin-right: 0.75em;
     transition: 0.5s ease all;    /*animation here*/
 }
 
