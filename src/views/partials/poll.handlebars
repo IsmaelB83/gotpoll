@@ -1,0 +1,23 @@
+<div class="poll-line">
+    <div class="gap" style="grid-column: span 3"></div>
+    <h4>Vive</h4>
+    <h4>White Walker</h4>
+    <h4>Muere</h4>
+</div>
+<div class="poll-line">
+    <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Cersei_Lannister">
+        <figure class="poll-line-figure">
+            <img src="/public/img/cersei.jpeg" alt="cersei" class="img-fluid rounded-circle">
+            <div class="overlay-img rounded-circle"><span>+</span></div>
+        </figure>
+    </a>
+    <h3>Cersei</h3>
+    <span class="poll-dotted"></span>
+    <label for="rbCerseiV"><input type="radio" value="cersei-V" name="cersei" id="rbCerseiV"><span></span></label>
+    <label for="rbCerseiWW"><input type="radio" value="cersei-WW" name="cersei" id="rbCerseiWW"><span></span></label>
+    <label for="rbCerseiD"><input type="radio" value="cersei-D" name="cersei" id="rbCerseiD"><span></span></label>
+</div>
+
+{{#each results }}
+<h1>{{results.name}}</h1>
+{{/each}}

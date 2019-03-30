@@ -1,0 +1,31 @@
+
+<div class="poll-line">
+    <div class="gap" style="grid-column: span 3"></div>
+    <h4>Vive</h4>
+    <h4>White Walker</h4>
+    <h4>Muere</h4>
+</div>
+{{#each personajes }}
+<div class="poll-line">
+    <a target="_blank" rel="noopener noreferrer" href="{{url}}">
+        <figure class="poll-line-figure">
+            <img src="/public/img/{{img}}" alt="{{key}}" class="img-fluid rounded-circle">
+            <div class="overlay-img rounded-circle"><span>+</span></div>
+        </figure>
+    </a>
+    <h3>{{name}}</h3>
+    <span class="poll-dotted"></span>
+    <h3 id='{{key}}-a'> - </h3>
+    <h3 id='{{key}}-b'> - </h3>
+    <h3 id='{{key}}-c'> - </h3>
+</div>
+{{/each}}
+
+<script>
+let element
+{{#each votos}}
+    element = '#{{_id.name}}-{{_id.opcion}}'; 
+    console.log(element);
+    document.querySelector(element).textContent = '{{count}}'; 
+{{/each}}
+</script>

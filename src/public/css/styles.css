@@ -1,0 +1,188 @@
+:root {
+    --back-dark-color: #020202;
+    --back-light-color: #2d2d2d;
+    --color-yellow: #fac832;
+    --color-white: #fff;
+    --height-nav: 61px;
+    --font-size: 16px;
+}
+
+body {
+    position: relative;
+    background-color: var(--back-dark-color);
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--color-white);
+    padding-top: var(--height-nav);
+    font-size: var(--font-size);
+    min-height: 100vh;
+}
+
+.navbar {
+    border-bottom: 4px solid var(--color-yellow);
+}
+
+.title-poll {
+    font-family: 'Montserrat', sans-serif;
+    color: (var(--color-white));
+    position: relative;
+    margin-top: 3em;
+}
+
+.title-poll h1 {
+    font-size: 3em;
+    margin: .5em auto .2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.title-poll h1 span {
+    color: var(--color-yellow);
+}
+
+.title-poll p {
+    color:var(--color-white);
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.title-poll-img {
+    position: relative;
+    width: 200px;
+}
+
+@media (max-width: 480px) {
+    .title-poll {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.2em;
+    }
+    .title-poll-body {
+        color:var(--color-white);
+        font-size: 1em;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.grid-poll {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.poll-line {
+    position: relative;
+    width: 100%;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 100px auto 1fr 100px 100px 100px;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.poll-line-figure {
+    cursor: pointer;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 0;
+}
+
+.poll-line-figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+}
+
+.overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s ease;
+    background-color: rgba(250, 200, 50, 0.5);
+    border: 2px solid white;
+}
+
+.poll-line a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.overlay-img span {
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1.60em;
+}
+
+ .poll-line-figure:hover .overlay-img {
+    opacity: 1;
+}
+
+.poll-line h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    word-wrap: break-word;
+}
+
+.poll-dotted {
+    content: '';
+    display: block;
+    width: 98%;
+    border-bottom: 3px dotted white;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+/* HTML5 Boilerplate radio-one hidden styles */
+[type="radio"] {
+    border: 0;
+    height: 1px; margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 0.5px;
+}
+
+/* One radio button per line */
+label {
+    display: block;
+    cursor: pointer;  /*hand view when on hover*/
+    line-height: 2.5;
+    font-size: 1.5em;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.25em;
+    border-radius: 1em;           /*hard border*/
+    border: 0.125em solid #fff;
+    box-shadow: 0 0 0 0.1em #000;   /*light shadow*/
+    margin-right: 0.75em;
+    transition: 0.5s ease all;    /*animation here*/
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+    background: var(--color-yellow);
+    box-shadow: 0 0 0 0.18em #ccc;
+}
+

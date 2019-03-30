@@ -1,0 +1,14 @@
+<div class="w-100 text-center">
+    <h1>Tus predicción ha sido registrada!</h1>
+</div>
+<div class="w-100 text-center" style="color: var(--color-yellow);">
+    <h2>Suerte Caminante!</h2>
+</div>
+<script>
+    let poll = {
+        id: '{{results._id}}',
+        name: '{{results.name}}',
+        email: '{{results.email}}',
+    }
+    window.localStorage.setItem('poll', JSON.stringify(poll));
+</script>
